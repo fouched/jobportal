@@ -35,7 +35,6 @@ public class UsersController {
 
     @PostMapping("/register/new")
     public String userRegister(@Valid Users user, Model model) {
-
         Optional<Users> optionalUsers = usersService.getUserByEmail(user.getEmail());
         if (optionalUsers.isPresent()) {
             model.addAttribute("error", "This email already exists");
