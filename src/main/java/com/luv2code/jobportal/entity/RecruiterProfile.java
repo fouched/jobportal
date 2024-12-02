@@ -11,10 +11,11 @@ public class RecruiterProfile {
 
     @OneToOne
     @JoinColumn(name = "user_account_id")
+    @MapsId
     private Users userId;
 
     private String firstName;
-    private String lasName;
+    private String lastName;
     private String city;
     private String state;
     private String country;
@@ -30,12 +31,12 @@ public class RecruiterProfile {
         this.userId = userId;
     }
 
-    public RecruiterProfile(int userAccountId, Users userId, String firstName, String lasName,
+    public RecruiterProfile(int userAccountId, Users userId, String firstName, String lastName,
                             String city, String state, String country, String company, String profilePhoto) {
         this.userAccountId = userAccountId;
         this.userId = userId;
         this.firstName = firstName;
-        this.lasName = lasName;
+        this.lastName = lastName;
         this.city = city;
         this.state = state;
         this.country = country;
@@ -67,12 +68,12 @@ public class RecruiterProfile {
         this.firstName = firstName;
     }
 
-    public String getLasName() {
-        return lasName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLasName(String lasName) {
-        this.lasName = lasName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getCity() {
@@ -121,7 +122,7 @@ public class RecruiterProfile {
                 "userAccountId=" + userAccountId +
                 ", userId=" + userId +
                 ", firstName='" + firstName + '\'' +
-                ", lasName='" + lasName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", country='" + country + '\'' +
