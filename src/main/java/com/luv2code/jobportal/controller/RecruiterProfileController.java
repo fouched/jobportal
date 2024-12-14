@@ -75,6 +75,7 @@ public class RecruiterProfileController {
 
         String uploadDir = "photos/recruiter/" + savedUser.getUserAccountId();
         try {
+            //TODO should also delete previous upload
             FileUploadUtil.saveFile(uploadDir, filename, multipartFile);
         } catch(IOException ioe) {
            ioe.printStackTrace();
