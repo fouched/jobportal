@@ -25,8 +25,11 @@ public class Users {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date registrationDate;
 
+    // Below No need for referencedColumnName - the default joins to the primary key
+    // @JoinColumn(name = "user_type_id", referencedColumnName = "userTypeId")
+    // see: https://codingnomads.com/spring-data-jpa-joincolumn-configuration
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "userTypeId", referencedColumnName = "userTypeId")
+    @JoinColumn(name = "user_type_id")
     private UsersType userTypeId;
 
     public Users() {}
