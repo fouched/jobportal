@@ -174,7 +174,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- todo: continue here -->
+
                         <div class="row gutters" sec:authorize="hasAuthority('Job Seeker')">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="text-left mt-2">
@@ -191,23 +191,18 @@
 
                         <div class="row mt-3">
                             <div class="col-md-5 me-5" sec:authorize="hasAuthority('Job Seeker')">
-                                <label class="heading_font font_sub_heading_color">
-                                    Profile Photo</label
-                                >
+                                <label class="heading_font font_sub_heading_color">Profile Photo</label>
                                 <input
                                         type="file"
                                         name="image"
                                         class="form-control"
                                         accept="image/png, image/jpeg"
                                 />
-                                <input type="text" name="profilePhoto" th:field="*{profilePhoto}" class="form-control"
-                                       hidden/>
+                                <input type="text" name="profilePhoto" th:field="*{profilePhoto}" class="form-control" hidden/>
 
                             </div>
                             <div class="col-md-5 me-5">
-                                <label class="heading_font font_sub_heading_color">
-                                    Resume</label
-                                >
+                                <label class="heading_font font_sub_heading_color">Resume</label>
                                 <input
                                         sec:authorize="hasAuthority('Job Seeker')"
                                         type="file"
