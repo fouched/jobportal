@@ -144,19 +144,19 @@ public class JobPostActivity {
         this.postedDate = postedDate;
     }
 
-    public Boolean getActive() {
+    public Boolean getIsActive() {
         return isActive;
     }
 
-    public void setActive(Boolean active) {
+    public void setIsActive(Boolean active) {
         isActive = active;
     }
 
-    public Boolean getSaved() {
+    public Boolean getIsSaved() {
         return isSaved;
     }
 
-    public void setSaved(Boolean saved) {
+    public void setIsSaved(Boolean saved) {
         isSaved = saved;
     }
 
