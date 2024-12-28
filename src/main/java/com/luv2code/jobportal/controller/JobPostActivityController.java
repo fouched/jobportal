@@ -121,11 +121,11 @@ public class JobPostActivityController {
                 List<JobSeekerSave> jobSeekerSaveList = jobSeekerSaveService.getJobsByUserId((JobSeekerProfile) currentUserProfile);
 
                 boolean hasApplied;
-                boolean hadSaved;
+                boolean hasSaved;
 
                 for (JobPostActivity jobPostActivity: jobPostActivities) {
                     hasApplied = false;
-                    hadSaved = false;
+                    hasSaved = false;
 
                     for (JobSeekerApply jobSeekerApply: jobSeekerApplyList) {
                         if (Objects.equals(jobPostActivity.getJobPostId(), jobSeekerApply.getJob().getJobPostId())) {
@@ -138,7 +138,7 @@ public class JobPostActivityController {
                     for (JobSeekerSave jobSeekerSave: jobSeekerSaveList) {
                         if (Objects.equals(jobPostActivity.getJobPostId(), jobSeekerSave.getJob().getJobPostId())) {
                             jobPostActivity.setIsSaved(true);
-                            hadSaved = true;
+                            hasSaved = true;
                             break;
                         }
                     }
@@ -146,7 +146,7 @@ public class JobPostActivityController {
                     if (!hasApplied) {
                         jobPostActivity.setIsActive(false);
                     }
-                    if (!hadSaved) {
+                    if (!hasSaved) {
                         jobPostActivity.setIsSaved(false);
                     }
 
