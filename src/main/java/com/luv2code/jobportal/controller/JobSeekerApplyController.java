@@ -99,7 +99,7 @@ public class JobSeekerApplyController {
                 jobSeekerApply.setJob(jobPostActivity);
                 jobSeekerApply.setApplyDate(new Date());
             } else {
-                // this is bad, rather do proper error handling...
+                //TODO WTF? Rather do proper error handling
                 throw new RuntimeException("User not found");
             }
             jobSeekerApplyService.addNew(jobSeekerApply);

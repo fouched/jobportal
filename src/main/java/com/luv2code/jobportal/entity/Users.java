@@ -10,6 +10,7 @@ import java.util.Date;
 @Table(name = "users")
 public class Users {
 
+    //TODO why deviate from using id like in most of the other tables?
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;

@@ -9,6 +9,7 @@ public class RecruiterProfile {
     @Id
     private int userAccountId;
 
+    //TODO really bad variable naming
     @OneToOne
     @JoinColumn(name = "user_account_id")
     @MapsId

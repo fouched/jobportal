@@ -15,10 +15,12 @@ public class JobSeekerSave {
     private Integer id;
 
     // Below - No need for referencedColumnName - the default joins to the primary key
+    //TODO really bad variable naming
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private JobSeekerProfile userId;
 
+    //TODO really bad variable naming
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "job")
     private JobPostActivity job;
@@ -26,10 +28,10 @@ public class JobSeekerSave {
     public JobSeekerSave() {
     }
 
-    public JobSeekerSave(Integer id, JobSeekerProfile userId, JobPostActivity job) {
+    public JobSeekerSave(Integer id, JobSeekerProfile userId, JobPostActivity jobPost) {
         this.id = id;
         this.userId = userId;
-        this.job = job;
+        this.job = jobPost;
     }
 
     public Integer getId() {

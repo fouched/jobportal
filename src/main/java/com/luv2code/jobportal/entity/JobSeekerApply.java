@@ -18,10 +18,12 @@ public class JobSeekerApply {
     private Integer id;
 
     // Below - No need for referencedColumnName - the default joins to the primary key
+    //TODO really bad variable naming
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private JobSeekerProfile userId;
 
+    //TODO really bad variable naming
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "job")
     private JobPostActivity job;

@@ -111,6 +111,7 @@ public class JobSeekerProfileController {
             }
 
         } catch (IOException ioe) {
+            //TODO WTF? Rather do proper error handling
             throw new RuntimeException(ioe);
         }
 

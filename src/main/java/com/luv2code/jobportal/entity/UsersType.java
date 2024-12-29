@@ -8,6 +8,7 @@ import java.util.List;
 @Table(name = "users_type")
 public class UsersType {
 
+    //TODO why deviate from using id like in most of the other tables?
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userTypeId;

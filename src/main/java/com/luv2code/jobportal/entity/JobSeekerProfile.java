@@ -11,6 +11,7 @@ public class JobSeekerProfile {
     @Id
     private Integer userAccountId;
 
+    //TODO really bad variable naming
     @OneToOne
     @JoinColumn(name = "user_account_id")
     @MapsId
